@@ -1,0 +1,47 @@
+'use client';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Search, Zap, Video } from 'lucide-react';
+
+export default function Hero() {
+  return (
+    <section className="relative pt-20 pb-32 overflow-hidden bg-slate-50">
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          <div className="flex-1 text-center lg:text-left">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+              <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-blue-600 uppercase bg-blue-50 rounded-full">
+                PCWyse – Smart Services. Simplified.
+              </span>
+              <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 mb-6">
+                Professional Laptop & PC Repair at <span className="text-blue-600">Your Doorstep</span>
+              </h1>
+              <p className="text-lg text-slate-600 mb-10 max-w-2xl">
+                Book certified technicians in minutes for home visits, priority repairs, and AMC plans.
+              </p>
+            </motion.div>
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-12">
+              <button className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-2xl shadow-lg shadow-blue-200 flex items-center gap-2">
+                Book Repair <Zap className="w-4 h-4" />
+              </button>
+              <button className="px-8 py-4 bg-white text-slate-900 border border-slate-200 font-semibold rounded-2xl">
+                Priority Service
+              </button>
+            </div>
+            <div className="relative max-w-xl">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
+              <input className="w-full pl-12 pr-4 py-4 bg-white border border-slate-200 rounded-2xl shadow-sm" placeholder="Search your device or issue..." />
+            </div>
+          </div>
+          <div className="flex-1 bg-white rounded-[40px] shadow-2xl p-12 text-center border border-slate-100">
+             <div className="w-20 h-20 bg-blue-50 rounded-3xl mx-auto mb-4 flex items-center justify-center">
+                <Zap className="text-blue-600 w-10 h-10" />
+             </div>
+             <h3 className="text-xl font-bold">Quick Diagnostics</h3>
+             <p className="text-slate-500">Starting from ₹199</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
